@@ -1,98 +1,111 @@
-*
-{
+*{
+    margin: 0;
     padding: 0;
-    margin: 0;    
+    font-family: sans-serif;
 }
-body
-{
-background-image: url(sky.jpg);
-background-size: cover;
-background-position: center;
-box-sizing: border-box;
-font-family: sans-serif;
+.flex-container{
+   display: flex;
+   flex-wrap: wrap;
 }
-.menu-bar
-{
-    text-align: center;
-    background: wheat;
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: 8px;
+    
+
+
+
+
+
+    
 }
-.menu-bar ul
-{
-    display: inline-flex;
-    list-style: none;
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: green;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
     color: white;
+    font-weight: 700px;
 }
-.menu-bar ul li 
-{
-    width: 120px;
-    margin: 15px;
-    padding: 15px;
+
+.navigation ul {
+    list-style: none;
 }
-.menu-bar ul li a 
-{
+.header .navigation ul li{
+    float: left;
+    position: relative;
+}
+.header .navigation ul li a{
+    font-size: 20px;
+    color: white;
     text-decoration: none;
-    color: black
-}
-.active, .menu-bar ul li:hover
-{
-    background: goldenrod;
-    border-radius: 5px;
-}
-.menu-bar .fa
-{
-  margin-right: 8px;  
-}
-.sub-menu-1{
-    display: none;  
-}
-.menu-bar ul li:hover .sub-menu-1
-{
+    padding: 20px;
     display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+background: black;
+}
+.header .navigation ul li ul{
     position: absolute;
-    background:greenyellow ;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul
-{
-    display: block;
-    margin: 10px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li
-{
-    width: 150px;
-    padding: 10px;
-    border-bottom: 1px dotted #fff;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li:last-child
-{
-    border-bottom: none;
-}
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover
-{
-    color: green;
-}
-.fa-angle-right{
-    float: right;
-}
-.sub-menu-2
-{
+    right: 0;
+    width: 300px;
+    background-color: green;
+
     display: none;
+
 }
-.hover-me:hover .sub-menu-2
+
+.header .navigation ul li ul a {
+font-size: 15px;
+text-transform: capitalize;
+
+}
+.header .navigation ul li ul li  ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+.header .navigation ul li ul li {
+width: 100%;
+border-top: 1px solid white
+}
+.header .navigation ul li:hover > ul
 {
-position: absolute;
-display: block;
-margin-top: -40px;
-margin-left: 140px;
-background: green;
+    display: initial;
+
 }
- 
- 
+#toggle{
+    display: none;
+    
+}
+    
+
+img{
+    width: 50px;
+    height: 45px;
+}
+.header .navigation ul {
+    width: 100%;
+    border-top: 1px solid green;
+}
 
 
+.hero{
+    min-height: 100vh;
+    background: url(sky.jpg);
+    
 
-
+}
